@@ -7,24 +7,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using UnityEditor;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Coin : Collectable
 {
-    /// <summary>
-    /// creating a variable to declare the value of the coin
-    /// </summary>
-    public int collecableValue = 10;
 
-    /// <summary>
-    /// making a function where the player touches a coin to add their score
-    /// </summary>
-    public void OnTriggerEnter(Collider other)
+        void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "player")
         {
-            other.gameObject.GetComponent<PlayerCollider>().IncreaseScore(collecableValue);
-            Destroy(gameObject);
+            Collect(other.gameObject, 10);
         }
     }
 }

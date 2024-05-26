@@ -6,7 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Door
-  - Collectable
+  - Interactactable
   layers:
   - Default
   - TransparentFX

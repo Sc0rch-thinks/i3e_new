@@ -9,7 +9,7 @@ using System.IO;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using Cinemachine;
 public class Player : MonoBehaviour
 {
     /// <summary>
@@ -37,6 +37,9 @@ public class Player : MonoBehaviour
     {
         Tutorial.text = "";
         Destroy(screen);
+    }
+    void OnChangeView()
+    {
     }
 
     /// <summary>
@@ -85,7 +88,7 @@ public class Player : MonoBehaviour
         Points.text =
             $"Points : {gameObject.transform.parent.GetComponentInChildren<PlayerCollider>().playerScore}";
     }
-
+    
     void OnUse()
     {
         ///<summary>
@@ -105,6 +108,13 @@ public class Player : MonoBehaviour
             ///<summary>
             /// open door if the player is looking at it
             /// </summary>
+            if (hitInfo.collider.gameObject.CompareTag("Interactable"))
+            {
+                
+            }
+            
+            
+            
             if (hitInfo.collider.gameObject.name == "Door")
             {
                 hitInfo

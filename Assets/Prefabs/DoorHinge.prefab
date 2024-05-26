@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8411154046912226481}
   m_Layer: 0
   m_Name: DoorHinge
-  m_TagString: Door
+  m_TagString: Interactactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLocked: 0
+  Locked: {fileID: 0}
 --- !u!65 &8411154046912226481
 BoxCollider:
   m_ObjectHideFlags: 0
